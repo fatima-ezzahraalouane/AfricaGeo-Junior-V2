@@ -21,6 +21,8 @@ CREATE TABLE usersite (
 CREATE TABLE continent (
     id_continent int not null AUTO_INCREMENT PRIMARY KEY,
     nom VARCHAR(250) NOT NULL UNIQUE,
+    description TEXT not null,
+    imageUrl VARCHAR(300) NOT null,
     nombrepays int DEFAULT 0
 );
 
