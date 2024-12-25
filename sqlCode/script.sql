@@ -36,3 +36,14 @@ CREATE TABLE pays (
     id_continent INT NOT null,
     FOREIGN KEY (id_continent) REFERENCES continent(id_continent) ON DELETE CASCADE
 );
+
+CREATE TABLE ville (
+    id_ville INT NOT null AUTO_INCREMENT PRIMARY KEY,
+    nom VARCHAR(250) NOT NULL UNIQUE,
+    description TEXT NOT null,
+    type ENUM('Capitale', 'Autre') NOT NULL,
+    imageUrl VARCHAR(300) NOT null,
+    id_pays INT NOT null,
+    FOREIGN KEY (id_pays) REFERENCES pays(id_pays) ON DELETE CASCADE
+);
+
