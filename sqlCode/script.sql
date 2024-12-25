@@ -47,3 +47,13 @@ CREATE TABLE ville (
     FOREIGN KEY (id_pays) REFERENCES pays(id_pays) ON DELETE CASCADE
 );
 
+-- Insertion du continent "Afrique"
+INSERT INTO continent (nom, description, imageUrl, nombrepays)
+VALUES (
+    'Afrique',
+    'L''Afrique est le deuxième plus grand continent du monde, couvrant environ 30 millions de km². 
+    Il est composé de 54 pays, abritant une diversité culturelle, linguistique et ethnique unique. 
+    Le continent est riche en ressources naturelles, notamment les minéraux, le pétrole et la biodiversité.',
+    'https://cdn.worlddata.info/pics/og/africa.jpg',
+    13
+);
