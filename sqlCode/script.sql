@@ -23,3 +23,14 @@ CREATE TABLE continent (
     nom VARCHAR(250) NOT NULL UNIQUE,
     nombrepays int DEFAULT 0
 );
+
+CREATE TABLE pays (
+    id_pays int NOT null AUTO_INCREMENT PRIMARY KEY,
+    nom VARCHAR(250) NOT NULL UNIQUE,
+    population INT NOT null,
+    langues VARCHAR(255) NOT null,
+    imageUrl VARCHAR(300) NOT null,
+    description TEXT,
+    id_continent INT NOT null,
+    FOREIGN KEY (id_continent) REFERENCES continent(id_continent) ON DELETE CASCADE
+);
