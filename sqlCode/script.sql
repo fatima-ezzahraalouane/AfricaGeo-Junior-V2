@@ -17,3 +17,9 @@ CREATE TABLE usersite (
     id_role int NOT null,
     FOREIGN KEY (id_role) REFERENCES role(id_role)
 );
+
+CREATE TABLE continent (
+    id_continent int not null AUTO_INCREMENT PRIMARY KEY,
+    nom VARCHAR(250) NOT NULL UNIQUE,
+    nombrepays int DEFAULT 0
+);
