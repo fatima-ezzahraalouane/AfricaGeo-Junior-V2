@@ -30,7 +30,7 @@ CREATE TABLE pays (
     population INT NOT null,
     langues VARCHAR(255) NOT null,
     imageUrl VARCHAR(300) NOT null,
-    description TEXT,
+    description TEXT NOT null,
     id_continent INT NOT null,
     FOREIGN KEY (id_continent) REFERENCES continent(id_continent) ON DELETE CASCADE
 );
