@@ -55,7 +55,7 @@ VALUES (
     Il est composé de 54 pays, abritant une diversité culturelle, linguistique et ethnique unique. 
     Le continent est riche en ressources naturelles, notamment les minéraux, le pétrole et la biodiversité.',
     'https://cdn.worlddata.info/pics/og/africa.jpg',
-    13
+    54
 );
 
 -- Insertion des pays africains avec leurs détails
