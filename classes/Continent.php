@@ -57,6 +57,12 @@ class Continent {
         return $stmt->execute();
     }
 
-  
+    // ✅ 5. Supprimer un continent
+    public function deleteContinent($id) {
+        $query = "DELETE FROM continent WHERE id_continent = :id_continent";
+        $stmt = $this->conn->prepare($query);
+        $stmt->bindParam(':id_continent', $id);
+        return $stmt->execute();
+    }
 }
 ?>
