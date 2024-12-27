@@ -26,6 +26,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             header('Location: ../views/interface_user.php');
         }
         exit();
+        // si des informations incorrects
     } else {
         echo "Identifiants incorrects. Veuillez réessayer.";
     }
