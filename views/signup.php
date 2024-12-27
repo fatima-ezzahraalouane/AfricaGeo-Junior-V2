@@ -309,12 +309,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             <div class="overlay">
                 <div class="overlay-panel overlay-left">
                     <h1>Content de te revoir !</h1>
-                    <p>Pour rester connecté avec nous, veuillez vous connecter avec vos informations personnelles.</p>
+                    <p>Pour accéder à toutes les fonctionnalités d'Africa Geo Junior, veuillez vous connecter avec vos informations personnelles.</p>
                     <button class="ghost" id="signIn">Se connecter</button>
                 </div>
                 <div class="overlay-panel overlay-right">
-                    <h1>Bonjour, cher client !</h1>
-                    <p>Entrez vos informations personnelles et profitez d'une expérience gastronomique inoubliable avec nous.</p>
+                    <h1>Bonjour, cher utilisateur !</h1>
+                    <p>Entrez vos informations personnelles et explorez l'Afrique à travers une expérience éducative interactive et enrichissante avec Africa Geo Junior.</p>
                     <button class="ghost" id="signUp">S'inscrire</button>
                 </div>
             </div>
