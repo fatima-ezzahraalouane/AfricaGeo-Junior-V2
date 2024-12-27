@@ -43,6 +43,20 @@ class Continent {
         return $stmt->fetch(PDO::FETCH_ASSOC);
     }
 
-    
+    // ✅ 4. Mettre à jour un continent
+    public function updateContinent() {
+        $query = "UPDATE continent 
+                  SET nom = :nom, description = :description, imageUrl = :imageUrl, nombrepays = :nombrepays 
+                  WHERE id_continent = :id_continent";
+        $stmt = $this->conn->prepare($query);
+        $stmt->bindParam(':id_continent', $this->id_continent);
+        $stmt->bindParam(':nom', $this->nom);
+        $stmt->bindParam(':description', $this->description);
+        $stmt->bindParam(':imageUrl', $this->imageUrl);
+        $stmt->bindParam(':nombrepays', $this->nombrepays);
+        return $stmt->execute();
+    }
+
+  
 }
 ?>
