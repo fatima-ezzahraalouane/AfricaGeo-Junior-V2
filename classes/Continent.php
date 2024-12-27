@@ -3,11 +3,11 @@ class Continent {
     private $conn; // Connexion à la base de données
     private $table = 'continent';
 
-    protected $id_continent;
-    private $nom;
-    private $description;
-    private $imageUrl;
-    private $nombrepays;
+    public $id_continent;
+    public $nom;
+    public $description;
+    public $imageUrl;
+    public $nombrepays;
 
     // Constructeur avec la connexion à la base de données
     public function __construct($db) {
@@ -26,6 +26,12 @@ class Continent {
         return $stmt->execute();
     }
 
-    
+    // ✅ 2. Récupérer tous les continents
+    public function getAllContinents() {
+        $query = "SELECT * FROM continent";
+        $stmt = $this->conn->prepare($query);
+        $stmt->execute();
+        return $stmt->fetchAll(PDO::FETCH_ASSOC);
+    }
 }
 ?>
