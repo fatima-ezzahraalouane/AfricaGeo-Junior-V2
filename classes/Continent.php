@@ -33,5 +33,16 @@ class Continent {
         $stmt->execute();
         return $stmt->fetchAll(PDO::FETCH_ASSOC);
     }
+
+    // ✅ 3. Récupérer un continent par son ID
+    public function getContinentById($id) {
+        $query = "SELECT * FROM continent WHERE id_continent = :id_continent";
+        $stmt = $this->conn->prepare($query);
+        $stmt->bindParam(':id_continent', $id);
+        $stmt->execute();
+        return $stmt->fetch(PDO::FETCH_ASSOC);
+    }
+
+    
 }
 ?>
