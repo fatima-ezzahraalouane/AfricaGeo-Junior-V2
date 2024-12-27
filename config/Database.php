@@ -1,4 +1,5 @@
 <?php 
+// GestionBaseDeDonnées
 class Database {
     private $host = '127.0.0.1';
     private $db_name = 'v2_africageo_junior';
