@@ -271,6 +271,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
 <body>
     <!-- Formulaire de connexion -->
+    <!-- Signup -->
     <div class="container" id="container">
         <div class="form-container sign-up-container">
             <form method="POST" action="#">
@@ -287,6 +288,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 <button type="submit">S'inscrire</button>
             </form>
         </div>
+
+        <!-- Login -->
         <div class="form-container sign-in-container">
             <form method="POST" action="../controllers/AuthController.php">
                 <h1>Se connecter</h1>
